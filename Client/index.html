@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Secret Chat</h1>
+    </div>
+    <div id="container">
+        <ul class="list">
+            <!-- <li class="text">
+                Some randomsafsfasfasfas Text
+            </li>
+            <li class="text user">
+                Some random Text
+            </li>
+            <li class="text server">
+                Some random Text
+            </li> -->
+
+        </ul>
+    </div>
+    <form id="send">
+        <label for="message">Message</label>
+        <input type="text" name="message" id="message" />
+        <button type="submit" id="send-btn">Send</button>
+    </form>
+</body>
+
+</html>
