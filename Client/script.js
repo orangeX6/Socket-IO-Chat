@@ -1,4 +1,4 @@
-const socket = io('https://the-secret-chat.onrender.com');
+const socket = io('http://localhost:3000');
 
 const messageForm = document.getElementById('send');
 const messageInput = document.getElementById('message');
