@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000');
+const socket = io('/');
 
 const messageForm = document.getElementById('send');
 const messageInput = document.getElementById('message');
@@ -12,7 +12,10 @@ const options = {
 const time = Intl.DateTimeFormat('hi-IN', options).format(now);
 
 let username;
-if (localStorage.getItem('username')) {
+if (
+  localStorage.getItem('username') &&
+  localStorage.getItem('username') !== undefined
+) {
   username = localStorage.getItem('username');
 } else {
   username = prompt('Enter username - ');

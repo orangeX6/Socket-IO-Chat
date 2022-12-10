@@ -1,4 +1,21 @@
-const io = require('socket.io')(3000, {
+const path = require('path');
+
+const express = require('express');
+// const server = http.createServer(app);
+const app = express();
+
+app.use(express.static(path.join(__dirname, `../Client`)));
+
+app.get('/', (req, res) => {
+  console.log(__dirname);
+  res.sendFile(__dirname + '/index.html');
+});
+
+const server = app.listen(8000, () =>
+  console.log(`App running on port 8000..`)
+);
+
+const io = require('socket.io')(server, {
   cors: { origin: '*' },
 });
 
